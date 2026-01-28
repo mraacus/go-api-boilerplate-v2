@@ -62,3 +62,14 @@ watch:
         fi
 
 .PHONY: all build run test clean watch docker-run docker-down itest
+
+# goose utilities
+MIGRATIONS_DIR = internal/db/migrations
+
+# Create a goose migration
+# Eg: make new-migration NAME=add_feature_access_table
+new-migration:
+ifndef NAME
+	$(error Usage: make new-migration NAME=your_migration_name)
+endif
+	goose -dir $(MIGRATIONS_DIR) create $(NAME) sql

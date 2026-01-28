@@ -14,6 +14,7 @@ An easily extendible RESTful API server boilerplate in go.
   - [Database Setup](#set-up-your-postgresql-database-with-docker)
   - [Running the Server](#running-the-server)
   - [Testing the API](#test-the-server-api)
+- [Database Migrations](database-migrations)
 - [Project Structure](#project-structure)
 - [License](#license)
 
@@ -171,6 +172,23 @@ GET /health
 curl -X GET http://localhost:8080/health
 ```
 
+## Database Migrations
+For detailed explaination of migrations with Goose, refer to: https://github.com/pressly/goose
+
+Create a new database migration with Goose:
+```bash
+make new-migration NAME=add_feature_access_table
+```
+
+Apply pending migrations to update your database schema:
+```bash
+goose up
+```
+
+Revert the last applied migration:
+```bash
+goose down
+```
 
 ## Project Structure
 
