@@ -104,10 +104,7 @@ GET /
     {
     "message": "I am groot"
     }
-
 ```
-
-Curl
 
 ```bash
 curl -X GET http://localhost:8080/
@@ -118,7 +115,6 @@ Testing database functionality:
 Create a user:
 
 ```
-
 POST /users
 
     Request Body:
@@ -134,8 +130,6 @@ POST /users
     "role": "admin"
     }
 ```
-
-Curl
 
 ```bash
 curl -X POST http://localhost:8080/users \
@@ -163,19 +157,15 @@ GET /users
     ]
 ```
 
-Curl
-
 ```bash
 curl -X GET http://localhost:8080/users
 ```
 
-Ping your database to check its health using:
+Ping your database to check its health:
 
 ```
 GET /health
 ```
-
-Curl
 
 ```bash
 curl -X GET http://localhost:8080/health
