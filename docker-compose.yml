@@ -1,0 +1,16 @@
+services:
+  postgres-db:
+    image: postgres:latest
+    container_name: go-api-postgres-db
+    restart: always
+    environment:
+      POSTGRES_DB: ${DB_DATABASE}
+      POSTGRES_USER: ${DB_USER}
+      POSTGRES_PASSWORD: ${DB_PASSWORD}
+    ports:
+      - "${DB_PORT}:5432"
+    volumes:
+      - psql_volume_bp:/var/lib/postgresql/data
+
+volumes:
+  psql_volume_bp:
