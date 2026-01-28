@@ -52,19 +52,19 @@ This repository uses the following technology stack.
 
 1. Clone the repository
 
-   ```bash
-   git clone https://github.com/mraacus/go-api-boilerplate-v2.git
-   ```
+    ```bash
+    git clone https://github.com/mraacus/go-api-boilerplate-v2.git
+    ```
 
 2. Install dependencies
-```bash
-go mod tidy
-```
+    ```bash
+    go mod tidy
+    ```
 
 3. Create your .env file
-```bash
-cp .env.sample .env
-```
+    ```bash
+    cp .env.sample .env
+    ```
 
 ### Set up your PostgreSQL database with Docker
 
