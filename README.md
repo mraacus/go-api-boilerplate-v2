@@ -14,7 +14,7 @@ An easily extendible RESTful API server boilerplate in go.
   - [Database Setup](#set-up-your-postgresql-database-with-docker)
   - [Running the Server](#running-the-server)
   - [Testing the API](#test-the-server-api)
-- [Database Migrations](database-migrations)
+- [Database Migrations](#database-migrations)
 - [Project Structure](#project-structure)
 - [License](#license)
 
