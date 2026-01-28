@@ -19,7 +19,6 @@ An easily extendible RESTful API server boilerplate in go.
 
 ## Features
 
-- Domain-driven design with modular architecture
 - RESTful API setup built on Echo
 - PostgreSQL integration with GORM for type-safe database access
 - Database migrations with Goose for version-controlled schema changes
@@ -63,9 +62,9 @@ go mod tidy
 ```
 
 3. Create your .env file
-   ```bash
-   cp .env.sample .env
-   ```
+```bash
+cp .env.sample .env
+```
 
 ### Set up your PostgreSQL database with Docker
 
@@ -106,7 +105,11 @@ GET /
     "message": "I am groot"
     }
 
-// Curl
+```
+
+Curl
+
+```bash
 curl -X GET http://localhost:8080/
 ```
 
@@ -130,8 +133,11 @@ POST /users
     "name": "username",
     "role": "admin"
     }
+```
 
-// Curl
+Curl
+
+```bash
 curl -X POST http://localhost:8080/users \
   -H "Content-Type: application/json" \
   -d '{
@@ -155,8 +161,11 @@ GET /users
         "updated_at": "2026-01-28T15:00:00Z"
       }
     ]
+```
 
-// Curl
+Curl
+
+```bash
 curl -X GET http://localhost:8080/users
 ```
 
@@ -164,9 +173,14 @@ Ping your database to check its health using:
 
 ```
 GET /health
+```
 
+Curl
+
+```bash
 curl -X GET http://localhost:8080/health
 ```
+
 
 ## Project Structure
 
